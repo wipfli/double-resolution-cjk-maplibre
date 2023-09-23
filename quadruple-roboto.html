@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Quadruple Roboto</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://wipfli.github.io/double-resolution-cjk-maplibre/dist/maplibre-gl-quadruple.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+
+        // Define a FontFace
+        const font = new FontFace("Roboto", "url(roboto.ttf)");
+
+        // Add to the document.fonts (FontFaceSet)
+        document.fonts.add(font);
+
+        // Load the font
+        font.load();
+
+        // Wait until the fonts are all loaded
+        document.fonts.ready.then(() => {
+
+            var map = new maplibregl.Map({
+                container: 'map', // container id
+                style: 'roboto.json', // style URL
+                center: [3.1993, 39.4690], // starting position [lng, lat]
+                zoom: 8, // starting zoom
+                minZoom: 1,
+                hash: "map",
+                localIdeographFontFamily: '"Roboto"'
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
