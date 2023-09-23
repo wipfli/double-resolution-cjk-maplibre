@@ -26,3 +26,9 @@ Have a look at how the map looks like at:
 * Double resolution (#3006): https://wipfli.github.io/double-resolution-cjk-maplibre/double#map=4.29/21.55/94.39
 
 To best see the difference, open `main.html` in one tab and then `double.html` in a second tab and copy-paste the location from one tab to the other and switch between tabs.
+
+## Quadruple Resolution
+
+Just for fun, I also added a demo which shows what would happen if we quadruple the resolution:
+
+* Quadruple resolution: https://wipfli.github.io/double-resolution-cjk-maplibre/quadruple#map=4.29/21.55/94.39
